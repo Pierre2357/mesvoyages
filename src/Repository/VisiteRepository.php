@@ -55,4 +55,10 @@ class VisiteRepository extends ServiceEntityRepository
         }
     }
     
+    public function remove(Visite $visite): void
+    {
+        $this->getEntityManager()->remove($visite);
+        $this->getEntityManager()->flush();
+    }
+    
 }
