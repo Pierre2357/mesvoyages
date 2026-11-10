@@ -77,4 +77,12 @@ class VisiteRepository extends ServiceEntityRepository
         $this->getEntityManager()->flush();
     }
     
+    public function FindByTwoMoreRecents(): array {
+        return $this->createQueryBuilder('v')
+                ->orderBy('v.datecreation', 'DESC')
+                ->setMaxResults(2)
+                ->getQuery()
+                ->getResult();
+    }
+    
 }
