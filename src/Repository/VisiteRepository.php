@@ -81,7 +81,7 @@ class VisiteRepository extends ServiceEntityRepository
      * Retourne les 2 voyages les plus récents
      * @return array
      */
-    public function FindByTwoMoreRecents(): array {
+    public function findByTwoMoreRecents(): array {
         return $this->createQueryBuilder('v')
                 ->orderBy('v.datecreation', 'DESC')
                 ->setMaxResults(2)
