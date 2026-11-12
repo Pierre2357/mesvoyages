@@ -34,7 +34,6 @@ class VoyagesControllerTest extends WebTestCase {
         $client->clickLink('Paris');
         //récoupération du résultat du clic
         $response = $client->getResponse();
-        dd($client->getRequest());
         //contrôle si le lien existe
         $this->assertEquals(Response::HTTP_OK, $response->getStatusCode());
         //réccupération de la route et contrôle qu'elle est correcte
