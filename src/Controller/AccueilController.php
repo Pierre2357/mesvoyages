@@ -15,7 +15,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class AccueilController extends AbstractController {
     
     /**
-     * 
      * @var VisiteRepository
      */
     private $repository;

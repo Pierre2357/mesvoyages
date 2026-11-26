@@ -17,7 +17,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminEnvironnementController extends AbstractController {
     
     /**
-}
      * 
      * @var EnvironnementRepository
      */

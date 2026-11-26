@@ -24,7 +24,8 @@ class VisiteType extends AbstractType
             ->add('datecreation', DateType::class, [
                 'widget' => 'single_text',
                 'data' => isset($options['data']) &&
-                    $options['data']->getDateCreation() != null ? $options['data']->getDateCreation(): new DateTime('now'),
+                    $options['data']->getDateCreation() != null ?
+                    $options['data']->getDateCreation(): new DateTime('now'),
                 'label' => 'date'
             ])
             ->add('note', IntegerType::class, [
